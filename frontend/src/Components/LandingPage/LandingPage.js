@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {Link} from 'react-router-dom';
 
 // Import CSS styling
 import './LandingPage.css'
@@ -23,17 +24,23 @@ export default class LandingPage extends React.Component {
                   <span className="icon-bar"/>
                 </button>
                 <p id="logoName">
-                  <a className="navbar-brand" href="#">Jot</a>
+                  <Link to="/">
+                    <a className="navbar-brand" href="#">Jot</a>
+                  </Link>
                 </p>
               </div>
               {/* Collect the nav links, forms, and other content for toggling */}
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav navbar-right">
                   <li>
-                    <a href="#" id="loginLink">Log In</a>
+                    <Link to="/login">
+                      <a href="#" id="loginLink">Log In</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" id="signupLink">Sign Up</a>
+                    <Link to="/signup">
+                      <a href="#" id="signupLink">Sign Up</a>
+                    </Link>
                   </li>
                 </ul>
               </div>{/* /.navbar-collapse */}
@@ -46,11 +53,11 @@ export default class LandingPage extends React.Component {
         </div>
 
         <div className="row landingPageDescription">
-        <div className="row">
-          <div className="col-xs-6 col-sm-4">Input content for features</div>
-          <div className="col-xs-6 col-sm-4">Input content for features</div>
-          <div className="col-xs-6 col-sm-4">Input content for features</div>
-        </div>
+          <div className="row">
+            <div className="col-xs-6 col-sm-4">Input content for features</div>
+            <div className="col-xs-6 col-sm-4">Input content for features</div>
+            <div className="col-xs-6 col-sm-4">Input content for features</div>
+          </div>
         </div>
 
       </div>

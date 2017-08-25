@@ -1,0 +1,9 @@
+.notFoundWrapper {
+  background: #eeeeee;
+}
+
+.notFoundDescription {
+  text-align: center;
+  margin: 20vh 0 0 0;
+  height: 100vh;
+}
