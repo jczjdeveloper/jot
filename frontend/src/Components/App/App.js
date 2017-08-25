@@ -10,6 +10,8 @@ import {connect} from 'react-redux'
 
 // Import different components for react-router
 import LandingPage from '../LandingPage/LandingPage';
+import Login from '../Login/Login';
+import Signup from '../Signup/Signup';
 
 class App extends Component {
   render() {
@@ -17,6 +19,8 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={LandingPage}/>
+          <Route exact path="/login" component={Login}/>
+          <Route exact path="/signup" component={Signup}/>
 =
         </Switch>
       </Router>
@@ -26,6 +30,6 @@ class App extends Component {
 
 export default App;
 
-// <Route exact path="/login" component={Login}/>
-// <Route exact path="/signup" component={Signup}/>
+
+
 // <Route exact path="/dashboard" component={Dashboard}/>
