@@ -15,6 +15,8 @@ import Signup from '../Signup/Signup';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import NotFound from '../NotFound/NotFound';
 import Dashboard from '../Dashboard/Dashboard';
+import Tasklist from '../Tasklist/Tasklist';
+import TasklistHeader from '../TasklistHeader/TasklistHeader';
 
 class App extends Component {
   render() {
@@ -26,6 +28,8 @@ class App extends Component {
           <Route exact path="/signup" component={Signup}/>
           <Route exact path="/dashboard" component={Dashboard}/>
           <Route exact path="/loadingpage" component={LoadingPage}/>
+          <Route exact path="/tasklist" component={Tasklist}/>
+          <Route exact path="/tasklistHeader" component={TasklistHeader}/>
           <Route component="/notfound" component={NotFound}/>
 =
         </Switch>

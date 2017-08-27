@@ -1,7 +1,11 @@
 import React, {PropTypes} from 'react';
 
 // Import CSS styling
-import './Dashboard.css'
+import './Dashboard.css';
+
+// Import other components
+import Tasklist from '../Tasklist/Tasklist';
+
 
 export default class Dashboard extends React.Component {
   constructor(props) {
@@ -49,7 +53,8 @@ export default class Dashboard extends React.Component {
 
           {/*Start of main tasklist area*/}
           <div className="col-md-6 tasklistArea">
-            <h1>Main tasklist area</h1>
+            <Tasklist />
+
           </div>
           {/*End of main tasklist area*/}
 
