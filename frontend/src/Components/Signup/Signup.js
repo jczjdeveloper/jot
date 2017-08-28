@@ -33,10 +33,10 @@ class Signup extends React.Component {
 
   localSignup = (e) => {
     e.preventDefault();
-    console.log("Fire signup action");
-    this.props.userSignup(state);
+    console.log("Fire localSignup action");
+    this.props.userSignup(this.state);
     // console.log("signup action sent");
-    // this.props.history.push('/login');
+    this.props.history.push('/login');
   }
 
 

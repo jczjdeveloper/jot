@@ -1,12 +1,14 @@
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import express from 'express';
+import passport from 'passport';
 // import logger from 'morgan';
 // import favicon from 'serve-favicon';
 import Debug from 'debug';
 import path from 'path';
 import lessMiddleware from 'less-middleware';
 import mongoose from 'mongoose';
+import session from 'express-session';
 
 // Import routes so that they are available to app
 import index from './routes/index';
@@ -26,6 +28,11 @@ mongoose.Promise = global.Promise;
 const app = express();
 const debug = Debug('backend:app');
 
+/**
+ * API keys and Passport configuration.
+ */
+const passportConfig = require('./config/passport');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -41,6 +48,12 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+/**
+ * PASSPORT INITIALIZE AND SESSION.
+ */
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes being made available
 app.use('/', index);

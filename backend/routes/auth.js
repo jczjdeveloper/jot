@@ -13,7 +13,7 @@ router.get('/user', (req, res, next) => {
 router.post('/signup', (req, res, next) => {
   console.log('received signup action in backend.. proceeding to save new user.')
   User.findOne({ email: req.body.email }, (err, existingUser) => {
-    console.log('searching if there if email already in use...');
+    console.log('searching if email already in use...');
     console.log('Data: ', req.body.email, req.body.password);
 
     if (existingUser) {
