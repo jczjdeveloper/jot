@@ -3,7 +3,7 @@
 //Will be exported to App.js for app to receive user details
 
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcrypt-nodejs';
 
 const Schema = mongoose.Schema;
 
@@ -45,6 +45,21 @@ userSchema.methods.comparePassword = function comparePassword(candidatePassword,
     cb(err, isMatch);
   });
 };
+
+/**
+ * Helper method for finding user via email.
+ */
+userSchema.methods.getUserByEmail = function(email, callback){
+  const query = {email: email};
+  User.findOne(query, callback);
+}
+
+/**
+ * Helper method for finding user via userId.
+ */
+userSchema.methods.getUserById = function(id, callback){
+  User.findById(id, callback);
+}
 
 const User = mongoose.model('User', userSchema);
 
