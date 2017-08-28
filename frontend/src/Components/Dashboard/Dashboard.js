@@ -5,6 +5,7 @@ import './Dashboard.css';
 
 // Import other components
 import Tasklist from '../Tasklist/Tasklist';
+import TaskItemDescription from '../TaskItemDescription/TaskItemDescription';
 
 
 export default class Dashboard extends React.Component {
@@ -60,7 +61,8 @@ export default class Dashboard extends React.Component {
 
           {/*Start of taskItem Description*/}
           <div className="col-md-4 taskItemDescription">
-            <h1>taskItem Description Area</h1>
+            <TaskItemDescription />
+
           </div>
           {/*End of taskItem Description*/}
 

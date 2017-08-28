@@ -17,6 +17,8 @@ import NotFound from '../NotFound/NotFound';
 import Dashboard from '../Dashboard/Dashboard';
 import Tasklist from '../Tasklist/Tasklist';
 import TasklistHeader from '../TasklistHeader/TasklistHeader';
+import TasklistContent from '../TasklistContent/TasklistContent';
+import TaskItemDescription from '../TaskItemDescription/TaskItemDescription';
 
 class App extends Component {
   render() {
@@ -29,7 +31,9 @@ class App extends Component {
           <Route exact path="/dashboard" component={Dashboard}/>
           <Route exact path="/loadingpage" component={LoadingPage}/>
           <Route exact path="/tasklist" component={Tasklist}/>
-          <Route exact path="/tasklistHeader" component={TasklistHeader}/>
+          <Route exact path="/tasklistheader" component={TasklistHeader}/>
+          <Route exact path="/tasklistcontent" component={TasklistContent}/>
+          <Route exact path="/taskitemdescription" component={TaskItemDescription}/>
           <Route component="/notfound" component={NotFound}/>
 =
         </Switch>
@@ -39,7 +43,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-// <Route exact path="/dashboard" component={Dashboard}/>

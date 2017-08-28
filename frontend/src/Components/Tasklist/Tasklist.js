@@ -5,6 +5,7 @@ import './Tasklist.css'
 
 // Import other components
 import TasklistHeader from '../TasklistHeader/TasklistHeader';
+import TasklistContent from '../TasklistContent/TasklistContent';
 
 export default class Tasklist extends React.Component {
   constructor(props) {
@@ -15,6 +16,7 @@ export default class Tasklist extends React.Component {
     return (
       <div className="row">
           <TasklistHeader />
+          <TasklistContent />
       </div>
     );
   }

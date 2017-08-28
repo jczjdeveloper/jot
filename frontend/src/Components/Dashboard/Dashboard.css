@@ -34,12 +34,12 @@ li:hover {
 }
 
 .tasklistArea {
-  background: red;
   height: 100vh;
   padding: 0 30px 0 30px;
 }
 
 .taskItemDescription {
-  background: Green;
+  background: #dddddd;
   height: 100vh;
+  padding: 0 30px 0 30px;
 }

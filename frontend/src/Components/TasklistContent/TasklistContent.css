@@ -1,0 +1,22 @@
+#taskItemCheckbox {
+  margin: 0 10px 0 0;
+}
+
+.taskItemRow {
+  padding: 30px 80px 5px 20px;
+}
+
+.taskItemRow:hover {
+  background: yellow;
+}
+
+.taskItemTitle {
+  text-overflow: clip;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.taskItemDropdownEdit {
+  width: 5px
+}
